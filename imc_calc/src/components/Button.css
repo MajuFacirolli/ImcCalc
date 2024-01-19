@@ -1,0 +1,26 @@
+button {
+    text-transform: uppercase;
+    width: 160px;
+    height: 42px;
+    background-color: #00ADB5;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #03949c;
+}
+
+#clear_btn {
+    background-color: #393E46;
+    border: 1px solid #EEEEEE;
+    color: #EEEEEE;
+}
+
+#clear_btn:hover {
+    border-color: #00ADB5;
+    color: #00ADB5;
+}
