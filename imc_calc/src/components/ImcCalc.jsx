@@ -13,6 +13,20 @@ const ImcCalc = () => {
         setWeight("")
     }
 
+    const validDigits = (text) => {
+        return text.replace(/[^0-9,]/g, "")
+    }
+
+    const handleHeigthChange = (e) => {
+        const updatedValue = validDigits(e.target.value)
+        setHeight(updatedValue)
+    }
+
+    const handleWeigthChange = (e) => {
+        const updatedValue = validDigits(e.target.value)
+        setWeight(updatedValue)
+    }
+
   return (
     <div className="calc_container">
         <h2>Calculadora de IMC</h2>
@@ -20,11 +34,11 @@ const ImcCalc = () => {
             <div className="form_inputs">
                 <div className="form_control">
                     <label>Altura:</label>
-                    <input type="text" name="heigth" id="heigth" placeholder="Exemplo: 1,70" onChange={(e) => setHeight(e.target.value)} value={heigth}/>
+                    <input type="text" name="heigth" id="heigth" placeholder="Exemplo: 1,70" onChange={(e) => handleHeigthChange(e)} value={heigth}/>
                 </div>
                 <div className="form_control">
                     <label>Peso:</label>
-                    <input type="text" name="weigth" id="weigth" placeholder="Exemplo: 70,5" onChange={(e) => setWeight(e.target.value)} value={weigth}/>
+                    <input type="text" name="weigth" id="weigth" placeholder="Exemplo: 70,5" onChange={(e) => handleWeigthChange(e)} value={weigth}/>
                 </div>
             </div>
             <div className="action_control">
