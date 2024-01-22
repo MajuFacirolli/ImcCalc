@@ -1,0 +1,63 @@
+.result_container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.imc_number {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.imc_info {
+    font-size: 1.4rem;
+}
+
+.result_container h3 {
+    margin-top: 1rem;
+}
+
+.imc_table {
+    margin: 1.5rem 0rem;
+    font-size: 0.8rem;
+}
+
+.table_header {
+    font-weight: bold;
+}
+
+.table_header, .table_data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eeeeeec8;
+}
+
+.table_header h4, .table_data p {
+    flex: 1;
+}
+
+.table_header h4:nth-child(3), .table_data p:nth-child(3) {
+    max-width: 80px;
+}
+
+#back_btn {
+    align-self: center;
+}
+
+.good{
+    color: #9EDE73;
+}
+
+.low{
+    color: #F7EA00;
+}
+
+.medium{
+    color: #E48900 ;
+}
+
+.high{
+    color: #BE0000;
+}
