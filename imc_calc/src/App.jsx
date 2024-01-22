@@ -21,12 +21,30 @@ function App() {
     const weigthFloat = +weigth.replace(",", ".")
 
     const imcResult = (weigthFloat / (heigthFloat * heigthFloat)).toFixed(1)
+   
     setImc(imcResult);
+
+    data.forEach((item) => {
+      if(imcResult >= item.min && imcResult <= item.max){
+        setInfo(item.info)
+        setInfoClass(item.infoClass)
+      }
+    })
+
+    if(!info) return
+  }
+
+  const resetCalc = (e) => {
+    e.preventDefault()
+
+    setImc("")
+    setInfo("")
+    setInfoClass("")
   }
 
   return (
     <div className='container'>
-      {!imc ? ( <ImcCalc calcImc={calcImc}/>) : ( <ImcTable data={data}/>)}
+      {!imc ? ( <ImcCalc calcImc={calcImc}/>) : ( <ImcTable data={data} imc={imc} info={info} infoClass={infoClass} resetCalc={resetCalc}/>)}
      
     </div>
   )
